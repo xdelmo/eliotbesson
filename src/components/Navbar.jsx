@@ -18,10 +18,11 @@ function Navbar() {
     <div>
       {" "}
       {!isMenuOpen ? (
-        <nav className="flex text-primary  font-bold font-ppmori uppercase text-lg p-4 tracking-tighter">
+        <nav className="flex text-primary font-bold font-ppmori uppercase text-lg tracking-tighter p-4 justify-between">
           <a href="#" className=" text-primary font-ppmori letter-spacing-xs">
             EB
           </a>
+
           <div id="menuToggle" onClick={handleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,8 +41,8 @@ function Navbar() {
           </div>
         </nav>
       ) : (
-        <div className="bg-primary h-screen text-lg  tracking-tighter ">
-          <div id="menuToggle" onClick={handleMenu} className="p-4 ">
+        <div className="bg-primary h-screen text-lg  tracking-tighter p-4">
+          <div id="menuToggle" onClick={handleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -61,7 +62,7 @@ function Navbar() {
           <ul className="flex h-full flex-col text-white gap-2 justify-center">
             {navLinks.map((nav) => (
               <li key={nav.id} className="letter-spacing-xs flex">
-                <span className=" text-2xs">/{nav.id}</span>
+                <span className="tracking-wide text-2xs">/{nav.id}</span>
                 <a href="#" className="text-3xl ml-2">
                   {nav.title}
                 </a>

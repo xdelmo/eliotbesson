@@ -4,8 +4,7 @@ function Hero() {
   return (
     <div className="min-h-screen p-4">
       <h1 className="text-primary hero font-montserrat font-bold uppercase flex gap-1 flex-col letter-spacing-xs ">
-        <div className="flex-1">Eliot</div>{" "}
-        <div className="mt-[-.75em] flex-1">Besson</div>
+        <div>Eliot</div> <div className="mt-[-.75em]">Besson</div>
       </h1>
 
       <div className="text-primary text-xs letter-spacing-xs uppercase flex flex-col gap-3">
