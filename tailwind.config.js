@@ -9,6 +9,7 @@ module.exports = {
         accentLight: "#5146AE",
         accentLighter: "#3460C7",
         accentDesaturated: "#327EF6",
+        lightDesaturated: "#7c8086",
       },
       fontFamily: {
         arges: ["AT Arges Nero", "ui-serif"],

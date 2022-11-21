@@ -59,11 +59,14 @@ function Navbar() {
             </svg>
           </div>
 
-          <ul className="flex h-full flex-col text-white gap-2 justify-center">
+          <ul className="flex h-full flex-col  text-lightDesaturated gap-2 mt-32">
             {navLinks.map((nav) => (
-              <li key={nav.id} className="letter-spacing-xs flex">
+              <li
+                key={nav.id}
+                className="letter-spacing-xs flex hover:text-white"
+              >
                 <span className="tracking-wide text-2xs">/{nav.id}</span>
-                <a href="#" className="text-3xl ml-2">
+                <a href="#" className="text-5xl ml-2">
                   {nav.title}
                 </a>
               </li>
