@@ -27,7 +27,8 @@
 
   .stretch-vertycally {
     display: block;
-    transform: scale(1, 1.6);
+    transform: scale(0.9, 2);
+    transform-origin: 0% 70%;
   }
 
   .text-2xs {
