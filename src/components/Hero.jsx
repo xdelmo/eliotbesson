@@ -5,7 +5,7 @@ function Hero() {
     <div className="min-h-screen p-4">
       <h1 className="text-primary hero font-montserrat font-bold uppercase flex gap-1 flex-col letter-spacing-2xs stretch-vertycally my-12">
         <div>Eliot</div>
-        <div className="mt-[-.75em] flex-shrink">Besson</div>
+        <div className="mt-[-.75em]">Besson</div>
       </h1>
 
       <div className="text-primary letter-spacing-xs leading-5 uppercase flex flex-col gap-3">
@@ -21,7 +21,7 @@ function Hero() {
         </p>
       </div>
 
-      <p className="text-primary letter-spacing-xs leading-5 uppercase hover-underline-animation mt-8">
+      <p className="text-primary letter-spacing-xs leading-5 uppercase hover-underline-animation mt-8 up-letters-animation">
         Scroll to explore
       </p>
     </div>
