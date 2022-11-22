@@ -68,3 +68,57 @@ export const worksInfo = [
     link: "#",
   },
 ];
+
+export const footerLinks = [
+  {
+    title: "Sitemap",
+    links: [
+      {
+        name: "Home",
+        link: "https://www.hoobank.com/content/",
+      },
+      {
+        name: "Works",
+        link: "https://www.hoobank.com/how-it-works/",
+      },
+      {
+        name: "About",
+        link: "https://www.hoobank.com/create/",
+      },
+      {
+        name: "Playground",
+        link: "https://www.hoobank.com/explore/",
+      },
+    ],
+  },
+  {
+    title: "Socials",
+    links: [
+      {
+        name: "Linkedin",
+        link: "https://www.hoobank.com/content/",
+      },
+      {
+        name: "Dribble",
+        link: "https://www.hoobank.com/content/",
+      },
+      {
+        name: "Awwwards",
+        link: "https://www.hoobank.com/content/",
+      },
+    ],
+  },
+  {
+    title: "Infos",
+    links: [
+      {
+        name: "Terms & Conditions",
+        link: "https://www.hoobank.com/content/",
+      },
+      {
+        name: "Privacy Policy",
+        link: "https://www.hoobank.com/content/",
+      },
+    ],
+  },
+];
