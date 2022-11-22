@@ -95,4 +95,10 @@
     object-fit: cover;
     height: 50px;
   }
+
+  .aboutme-img {
+    height: 1em;
+    width: auto;
+    display: inline-block;
+  }
 }
