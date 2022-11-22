@@ -2,7 +2,7 @@ import React from "react";
 import { navLinks } from "../constants";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Navbar() {
+function Navbar2() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   function handleMenu() {
@@ -49,37 +49,51 @@ function Navbar() {
       },
     },
   };
-
   return (
-    // Navbar
     <div>
-      {" "}
-      <nav className="flex text-primary font-bold font-ppmori uppercase text-lg tracking-tighter p-4 justify-between">
-        <a href="#" className=" text-primary font-ppmori letter-spacing-xs">
-          EB
-        </a>
-
-        <div id="menuToggle" onClick={handleMenu}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 9h16.5m-16.5 6.75h16.5"
-            />
-          </svg>
-        </div>
-      </nav>
-      {isMenuOpen && (
+      {!isMenuOpen ? (
+        <nav class=" text-primary font-bold font-ppmori uppercase text-lg tracking-tighter p-4">
+          <div className="container flex items-center justify-between ">
+            <a href="https://flowbite.com/" class="flex items-center">
+              <a
+                href="#"
+                className=" text-primary font-ppmori letter-spacing-xs flex items-center"
+              >
+                <span class="self-center text-xl font-semibold  ">EB</span>
+              </a>
+            </a>
+            <button
+              type="button"
+              class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg "
+              aria-controls="navbar-default"
+              aria-expanded="false"
+              onClick={handleMenu}
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="hidden w-full md:block md:w-auto"
+              id="navbar-default"
+            ></div>
+          </div>
+        </nav>
+      ) : (
         <AnimatePresence>
           <motion.div
-            className="bg-primary fixed top-0 left-0 right-0 z-10 h-screen text-lg  tracking-tighter p-4"
+            className="bg-primary h-screen text-lg  tracking-tighter p-4  justify-between mx-auto"
             variants={navVariants}
             initial="hidden"
             animate="show"
@@ -102,7 +116,7 @@ function Navbar() {
               </svg>
             </div>
 
-            <ul className="flex h-full flex-col  text-lightDesaturated gap-2 mt-32">
+            <ul className="flex h-full flex-col text-lightDesaturated gap-2 mt-32">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
@@ -126,4 +140,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar2;

@@ -21,6 +21,9 @@
   .hero {
     font-size: 4rem;
   }
+  .work {
+    font-size: 3.5rem;
+  }
 
   .letter-spacing-xs {
     letter-spacing: -0.06rem;
@@ -85,5 +88,11 @@
   .hover-underline-animation-light:hover::after {
     transform: scaleX(0);
     transform-origin: bottom right;
+  }
+
+  .cover-img {
+    width: 50px;
+    object-fit: cover;
+    height: 50px;
   }
 }
