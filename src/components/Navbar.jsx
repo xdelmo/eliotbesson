@@ -17,6 +17,11 @@ function Navbar() {
 
   function handleClickLink() {
     setIsMenuOpen((prevState) => !prevState);
+    if (isMenuOpen) {
+      document.body.style.overflow = "unset";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
   }
 
   // Variants for framer motion animation menu

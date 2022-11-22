@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="min-h-screen p-4">
+    <div id="hero" className="min-h-screen p-4">
       <h1 className="text-primary hero font-montserrat font-bold uppercase flex gap-1 flex-col letter-spacing-2xs stretch-vertycally my-12">
         <div>Eliot</div>
         <div className="mt-[-.75em]">Besson</div>
