@@ -13,7 +13,7 @@ module.exports = {
         lightDesaturated: "#7c8086",
       },
       fontFamily: {
-        arges: ["AT Arges Nero", "ui-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
         ppmori: ["PP Mori", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
