@@ -33,6 +33,7 @@ export const worksInfo = [
     bgColor: "bg-primaryDark",
     img: "telio",
     tags: ["branding", "ux/ui design", "webflow development"],
+    link: "#",
   },
   {
     id: "02",
@@ -40,6 +41,7 @@ export const worksInfo = [
     bgColor: "bg-accentLighter",
     img: "moofize",
     tags: ["ux design", "ui design", "design system"],
+    link: "#",
   },
   {
     id: "03",
@@ -47,6 +49,7 @@ export const worksInfo = [
     bgColor: "bg-accentLight",
     img: "Crowdsec",
     tags: ["project management", "ux/ui design", "website motion"],
+    link: "#",
   },
   {
     id: "04",
@@ -54,6 +57,7 @@ export const worksInfo = [
     bgColor: "bg-accentDesaturated",
     img: "avest",
     tags: ["branding", "ux/ui design", "webflow development"],
+    link: "#",
   },
   {
     id: "05",
@@ -61,5 +65,6 @@ export const worksInfo = [
     bgColor: "bg-accentDark",
     img: "epsor",
     tags: ["ux/ui design", "ui illustrations", "website motion"],
+    link: "#",
   },
 ];

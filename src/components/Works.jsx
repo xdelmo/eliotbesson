@@ -30,6 +30,7 @@ function Works() {
           bgColor={workInfo.bgColor}
           img={workInfo.img}
           tags={workInfo.tags}
+          link={workInfo.link}
         />
       ))}
     </div>

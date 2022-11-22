@@ -62,4 +62,28 @@
     transform: scaleX(0);
     transform-origin: bottom right;
   }
+
+  .hover-underline-animation-light {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+  }
+
+  .hover-underline-animation-light::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom left;
+    transition: transform 0.75s ease-in-out;
+  }
+
+  .hover-underline-animation-light:hover::after {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
 }
