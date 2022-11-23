@@ -52,9 +52,9 @@ function Navbar() {
 
   return (
     // Navbar
-    <div>
+    <div className="bg-white">
       {" "}
-      <nav className="flex text-primary wrapper font-bold font-ppmori uppercase  tracking-tighter py-4 justify-between">
+      <nav className="flex  text-primary wrapper font-bold font-ppmori uppercase  tracking-tighter py-4 justify-between">
         <a href="#" className=" text-primary font-ppmori letter-spacing-xs">
           EB
         </a>

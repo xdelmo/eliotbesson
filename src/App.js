@@ -5,6 +5,7 @@ import Works from "./components/Works";
 import React from "react";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
+import Box from "./components/Box";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Works />
         <AboutMe />
       </main>
+      {/* Box per lasciare spazio al footer che è fixed alla fine del contenuto pagina */}
+      <Box />
       <Footer />
     </div>
   );

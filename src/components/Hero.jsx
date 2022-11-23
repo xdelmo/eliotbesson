@@ -14,7 +14,7 @@ function Hero() {
     },
   };
   return (
-    <div id="hero" className="min-h-screen">
+    <div id="hero" className="min-h-screen bg-white">
       <h1 className="text-primary hero font-montserrat font-bold uppercase wrapper flex  flex-col letter-spacing-xs ">
         <motion.div initial="hidden" animate="visible" variants={container}>
           <div className="container">

@@ -3,10 +3,13 @@ import { footerLinks } from "../constants";
 
 function Footer() {
   return (
-    <footer id="contact" className=" bg-primary rounded-t-3xl font-ppmori">
+    <footer
+      id="contact"
+      className=" bg-primary footer rounded-t-3xl font-ppmori"
+    >
       {/* larghezza fissa a 60 e si vede tutto, ma non è corretto perchè non responsive */}
       <div className=" py-4 wrapper">
-        <div className=" flex flex-row justify-between flex-wrap mt-10">
+        <div className=" flex flex-row justify-between flex-wrap gap-2 mt-8">
           {/* mappa tutti i footerLink del footerLinks */}
           {footerLinks.map((footerLink) => (
             <div className="flex flex-col my-4" key={footerLink.title}>
