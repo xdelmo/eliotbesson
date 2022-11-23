@@ -22,7 +22,7 @@ function Footer() {
                       index !== footerLink.length - 1 ? "mb-2" : "mb-0"
                     }`}
                   >
-                    {link.name}
+                    <a href={link.link}>{link.name}</a>
                   </li>
                 ))}
               </ul>
