@@ -4,7 +4,7 @@ function Work(props) {
   return (
     <div className={`${props.bgColor} font-montserrat`}>
       <div className="text-white min-h-screen p-4 py-20 flex flex-col justify-center items-center">
-        <div>
+        <div className="justify-center items-center flex flex-col">
           {/* <picture className="work-img"> */}
           {/* <source
                 type="image/webp"
@@ -14,7 +14,7 @@ function Work(props) {
           <img
             src={`./assets/${props.img}.png`}
             alt="works"
-            className="rounded-3xl w-full work-img"
+            className="rounded-3xl work-img"
           />
           {/* </picture> */}
           <div className="flex flex-col justify-center items-center uppercase">

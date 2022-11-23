@@ -98,10 +98,21 @@
     height: 50px;
   }
 
+  .work-img {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
   /* per avere immagini della stessa altezza del testo in cui si trova */
   .aboutme-img {
     height: 1em;
     width: auto;
     display: inline-block;
+  }
+
+  .wrapper {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
   }
 }
