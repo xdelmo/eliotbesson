@@ -1,29 +1,55 @@
 import React from "react";
+import { motion } from "framer-motion";
+import AnimatedText from "./AnimatedText";
 
 function Hero() {
+  const placeholderText = [{ type: "heading1", text: "Eliott" }];
+  const placeholderText2 = [{ type: "heading1", text: "Besson" }];
+
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025,
+      },
+    },
+  };
   return (
-    <div id="hero" className="min-h-screen p-4">
-      <h1 className="text-primary hero font-montserrat font-bold uppercase flex gap-1 flex-col letter-spacing-2xs stretch-vertycally my-12">
-        <div>Eliot</div>
-        <div className="mt-[-.75em]">Besson</div>
+    <div id="hero" className="min-h-screen">
+      <h1 className="text-primary hero font-montserrat font-bold uppercase wrapper flex  flex-col letter-spacing-xs ">
+        <motion.div initial="hidden" animate="visible" variants={container}>
+          <div className="container">
+            {placeholderText.map((item, index) => {
+              return <AnimatedText {...item} key={index} />;
+            })}
+          </div>
+        </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={container}>
+          <div className="container -mt-10">
+            {placeholderText2.map((item, index) => {
+              return <AnimatedText {...item} key={index} />;
+            })}
+          </div>
+        </motion.div>
+
+        {/* <div>Eliot</div>
+        <div className="mt-[-.75em]">Besson</div> */}
       </h1>
 
-      <div className="text-primary letter-spacing-xs leading-5 uppercase flex flex-col gap-3">
+      <div className="text-primary letter-spacing-xs wrapper leading-5 uppercase flex flex-col gap-3">
         <p className="flex-1">
-          i’m an independant digital <br /> designer & webflow expert <br />{" "}
-          based in france
+          i’m an independant digital designer & webflow expert based in france
         </p>
         <p className="flex-1">
-          focusing on creating purposeful user <br /> interfaces*
+          focusing on creating purposeful user interfaces*
         </p>
-        <p className="flex-1">
-          * with a hint on <br /> interactions & animations
-        </p>
+        <p className="flex-1">* with a hint on interactions & animations</p>
       </div>
 
-      <p className="text-primary letter-spacing-xs leading-5 uppercase hover-underline-animation mt-8 up-letters-animation">
-        Scroll to explore
-      </p>
+      <div className="wrapper">
+        <p className="text-primary letter-spacing-xs leading-5 uppercase hover-underline-animation mt-8 up-letters-animation">
+          Scroll to explore
+        </p>
+      </div>
     </div>
   );
 }
