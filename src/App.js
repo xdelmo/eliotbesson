@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Works from "./components/Works";
 import React from "react";
 import AboutMe from "./components/AboutMe";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Works />
         <AboutMe />
       </main>
+      <Footer />
     </div>
   );
 }
