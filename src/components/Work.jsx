@@ -3,7 +3,7 @@ import React from "react";
 function Work(props) {
   return (
     <div className={`${props.bgColor} font-montserrat`}>
-      <div className="text-white min-h-screen p-4 py-20 flex flex-col justify-center items-center">
+      <div className="text-white min-h-screen wrapper py-20 flex flex-col justify-center items-center">
         <div className="justify-center items-center flex flex-col">
           {/* <picture className="work-img"> */}
           {/* <source

@@ -54,7 +54,7 @@ function Navbar() {
     // Navbar
     <div>
       {" "}
-      <nav className="flex text-primary font-bold font-ppmori uppercase text-lg tracking-tighter p-4 justify-between">
+      <nav className="flex text-primary wrapper font-bold font-ppmori uppercase  tracking-tighter py-4 justify-between">
         <a href="#" className=" text-primary font-ppmori letter-spacing-xs">
           EB
         </a>
@@ -79,46 +79,54 @@ function Navbar() {
       {isMenuOpen && (
         <AnimatePresence>
           <motion.div
-            className="bg-primary fixed top-0 left-0 right-0 z-10 h-screen text-lg  tracking-tighter p-4"
+            className=" bg-primary w-screen fixed top-0 left-0 z-10 right-0 h-screen"
             variants={navVariants}
             initial="hidden"
             animate="show"
             exit="exit"
           >
-            <div id="menuToggle" onClick={handleMenu}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6 ml-auto text-white"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </div>
-
-            <ul className="flex h-full flex-col  text-lightDesaturated gap-2 mt-32">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className="letter-spacing-xs flex hover:text-white"
+            <motion.div
+              className="bg-primary fixed top-0 left-0 right-0 z-20 h-screen text-lg tracking-tighter py-4 wrapper"
+              variants={navVariants}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+            >
+              <div id="menuToggle" onClick={handleMenu}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 ml-auto text-white"
                 >
-                  <span className="tracking-wide text-2xs">/{nav.id}</span>
-                  <a
-                    href={nav.link}
-                    className="text-5xl ml-2"
-                    onClick={handleClickLink}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+
+              <ul className="flex h-full flex-col  text-lightDesaturated gap-2 mt-32">
+                {navLinks.map((nav) => (
+                  <li
+                    key={nav.id}
+                    className="letter-spacing-xs flex hover:text-white"
                   >
-                    {nav.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
+                    <span className="tracking-wide text-2xs">/{nav.id}</span>
+                    <a
+                      href={nav.link}
+                      className="text-5xl ml-2"
+                      onClick={handleClickLink}
+                    >
+                      {nav.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       )}
