@@ -99,7 +99,7 @@ export const footerLinks = [
       },
       {
         name: "Awwwards",
-        link: "https://www.https://www.awwwards.com/",
+        link: "https://www.awwwards.com/",
       },
     ],
   },
