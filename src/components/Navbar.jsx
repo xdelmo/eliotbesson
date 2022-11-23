@@ -109,7 +109,7 @@ function Navbar() {
                 </svg>
               </div>
 
-              <ul className="flex h-full flex-col  text-lightDesaturated gap-2 mt-32">
+              <ul className="flex h-screen  flex-col justify-center text-lightDesaturated gap-2">
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
