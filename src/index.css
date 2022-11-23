@@ -115,4 +115,13 @@
     margin-inline: auto;
     width: min(90%, 70.5rem);
   }
+
+  .line {
+    width: 3em;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+    margin-left: 0.5em;
+    height: 1px;
+    background-color: #fff;
+  }
 }

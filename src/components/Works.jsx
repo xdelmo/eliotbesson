@@ -1,6 +1,5 @@
 import React from "react";
 import { worksInfo } from "../constants";
-import MinusSVG from "./MinusSVG";
 import Work from "./Work";
 
 function Works() {
@@ -13,12 +12,7 @@ function Works() {
             <h2>Works</h2>
           </div>
           <p className="flex justify-center items-center font-ppmori">
-            <div className="line"></div>
-            2020 <MinusSVG margin="-mr-2" />
-            <MinusSVG margin="-mr-2" />
-            <MinusSVG margin="-mr-2" />
-            <MinusSVG margin="-mr-2" />
-            <MinusSVG />
+            2020 <span className="line"></span>
             2022
           </p>
         </div>
