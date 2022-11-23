@@ -22,7 +22,9 @@ function Work(props) {
               {`${props.name}`}
             </h2>
             {props.tags.map((tag) => (
-              <p className="font-ppmori">{tag}</p>
+              <p key={tag} className="font-ppmori">
+                {tag}
+              </p>
             ))}
             <p className="text-white letter-spacing-xs leading-5 uppercase hover-underline-animation-light mt-8 up-letters-animation font-ppmori">
               <a href={props.link}>Scroll to explore</a>
