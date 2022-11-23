@@ -4,19 +4,17 @@ import Work from "./Work";
 
 function Works() {
   return (
-    <div id="works">
-      <div className="bg-primary rounded-t-3xl">
-        <div className="text-white min-h-screen p-4 flex flex-col justify-center items-center">
-          <div className="hero flex flex-col flex-shrink justify-center items-center uppercase font-montserrat">
-            <h2>Selected</h2>
-            <h2>Works</h2>
-          </div>
-          <p className="flex justify-center items-center font-ppmori">
-            2020 <span className="line"></span>
-            2022
-          </p>
-        </div>
+    <div id="works" className="bg-primary rounded-t-3xl">
+      <div className="flex flex-col items-center justify-center min-h-screen p-4 text-white wrapper">
+        <h2 className="text-center uppercase hero font-montserrat">
+          Selected Works
+        </h2>
+        <p className="flex items-center justify-center font-ppmori">
+          2020 <span className="line"></span>
+          2022
+        </p>
       </div>
+
       {worksInfo.map((workInfo) => (
         <Work
           key={workInfo.id}
