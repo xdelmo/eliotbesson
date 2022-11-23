@@ -16,11 +16,6 @@ export const navLinks = [
   },
   {
     id: "04",
-    title: "Playground",
-    link: "#playground",
-  },
-  {
-    id: "05",
     title: "Contact",
     link: "#contact",
   },
@@ -75,19 +70,19 @@ export const footerLinks = [
     links: [
       {
         name: "Home",
-        link: "https://www.hoobank.com/content/",
+        link: "#hero",
       },
       {
         name: "Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        link: "#works",
       },
       {
         name: "About",
-        link: "https://www.hoobank.com/create/",
+        link: "#about",
       },
       {
-        name: "Playground",
-        link: "https://www.hoobank.com/explore/",
+        name: "Contact",
+        link: "#contact",
       },
     ],
   },
@@ -96,15 +91,15 @@ export const footerLinks = [
     links: [
       {
         name: "Linkedin",
-        link: "https://www.hoobank.com/content/",
+        link: "https://www.linkedin.com",
       },
       {
         name: "Dribble",
-        link: "https://www.hoobank.com/content/",
+        link: "https://www.dribble.com",
       },
       {
         name: "Awwwards",
-        link: "https://www.hoobank.com/content/",
+        link: "https://www.https://www.awwwards.com/",
       },
     ],
   },
@@ -113,11 +108,11 @@ export const footerLinks = [
     links: [
       {
         name: "Terms & Conditions",
-        link: "https://www.hoobank.com/content/",
+        link: "#",
       },
       {
         name: "Privacy Policy",
-        link: "https://www.hoobank.com/content/",
+        link: "#",
       },
     ],
   },

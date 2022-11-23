@@ -25,7 +25,10 @@ function AboutMe() {
   };
 
   return (
-    <div className="Aboutme min-h-screen p-4 py-20 flex flex-col justify-center items-start text-primary rounded-b-3xl round uppercase container">
+    <div
+      id="aboutme"
+      className="Aboutme min-h-screen p-4 py-20 flex flex-col justify-center items-start text-primary rounded-b-3xl round uppercase container"
+    >
       <h3 className="font-ppmori font-thin mb-2 text-xs opacity-50 letter-spacing-xs leading-5 ">
         A little more about me
       </h3>
