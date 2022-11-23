@@ -7,14 +7,18 @@ function Footer() {
       {/* larghezza fissa a 60 e si vede tutto, ma non è corretto perchè non responsive */}
       <div className=" py-4 wrapper">
         <div className=" flex flex-row justify-between flex-wrap mt-10">
+          {/* mappa tutti i footerLink del footerLinks */}
           {footerLinks.map((footerLink) => (
             <div className="flex flex-col my-4" key={footerLink.title}>
+              {/* stampa il titolo di ogni footerLink */}
               <h4 className="uppercase text-white">{footerLink.title}</h4>
               <ul className="mt-2">
+                {/* mappa tutti i link di ogni footerLink */}
+                {/* prendo index a */}
                 {footerLink.links.map((link, index) => (
                   <li
                     key={link.name}
-                    className={`text-lightDesaturated hover:text-white mb-0 ${
+                    className={`text-lightDesaturated hover:text-white ${
                       index !== footerLink.length - 1 ? "mb-2" : "mb-0"
                     }`}
                   >
