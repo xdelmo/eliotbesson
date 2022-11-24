@@ -1,7 +1,7 @@
 import React from "react";
 
 function Box() {
-  return <div className="h-screen pointer-events-none -z-10"></div>;
+  return <div className="h-screen pointer-events-none"></div>;
 }
 
 export default Box;

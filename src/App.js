@@ -5,8 +5,8 @@ import Works from "./components/Works";
 import React from "react";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
-// import { motion } from "framer-motion";
-// import AnimatedText from "./components/AnimatedText";
+import { motion } from "framer-motion";
+import AnimatedTitle from "./components/AnimatedTitle";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -17,51 +17,49 @@ function App() {
     }, [1500]);
   }, []);
 
-  // const placeholderText = [{ type: "paragraph", text: "Welcome!" }];
+  // Variants for framer motion animation menu
+  const loadingVariants = {
+    show: {
+      transition: {
+        delay: 1,
+      },
+    },
 
-  // const container = {
-  //   visible: {
-  //     transition: {
-  //       staggerChildren: 0.025,
-  //     },
-  //   },
-  // };
+    //! EXIT ANIMATION DOES NOT WORK
+    exit: {
+      opacity: 0,
+      y: "-100vh",
+      transition: {
+        duration: 1,
+      },
+    },
+  };
 
   return (
     <div className="App">
       {isLoading ? (
-        <div className="h-screen bg-primary z-99 font-ppmori">
-          <div className="h-full py-4 text-white wrapper ">
-            <div className="flex justify-between h-full ">
-              {/* 1 colonna */}
-              <div className="flex flex-col justify-between">
-                <p>Eliot </p>
-                <p>Digital Designer</p>
-              </div>
-              {/* 2 colonna */}
-              <div className="flex items-center justify-center">
-                <p className="font-bebas hero">Welcome!</p>
-                {/* <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={container}
-                className="flex items-center justify-center"
-              >
-                <div className="container">
-                  {placeholderText.map((item, index) => {
-                    return <AnimatedText {...item} key={index} />;
-                  })}
-                </div>
-              </motion.div> */}
-              </div>
-              {/* 3 colonna */}
-              <div className="flex flex-col items-end justify-between">
-                <p className="uppercase">Besson</p>
-                <p>Webflow Expert</p>
-              </div>
+        <motion.div
+          className="h-screen bg-primary z-99 font-ppmori"
+          variants={loadingVariants}
+          initial="show"
+          exit="exit"
+        >
+          <div className="flex flex-col justify-between h-screen py-4 text-white wrapper">
+            <div className="flex flex-row justify-between">
+              <p>Eliot </p>
+              <p className="uppercase">Besson</p>
+            </div>
+            <div className="flex items-center justify-center">
+              <h2 className="font-bebas hero">
+                <AnimatedTitle text="welcome" />
+              </h2>
+            </div>
+            <div className="flex flex-row items-end justify-between">
+              <p>Digital Designer</p>
+              <p>Webflow Expert</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       ) : (
         <div>
           <Navbar />

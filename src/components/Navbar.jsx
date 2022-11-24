@@ -86,13 +86,11 @@ function Navbar() {
             initial="hidden"
             animate="show"
             exit="exit"
+            key="bg"
           >
-            <motion.div
+            <div
               className="fixed top-0 left-0 right-0 z-20 h-screen py-4 text-lg tracking-tighter bg-primary wrapper"
               variants={navVariants}
-              initial="hidden"
-              animate="show"
-              exit="exit"
             >
               <div id="menuToggle" onClick={handleMenu}>
                 <svg
@@ -128,7 +126,7 @@ function Navbar() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </motion.div>
         </AnimatePresence>
       )}

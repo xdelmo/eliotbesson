@@ -48,7 +48,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="">
+        <div className="pb-20">
           <p className="mt-8 leading-5 uppercase text-primary letter-spacing-xs hover-underline-animation up-letters-animation">
             Scroll to explore
           </p>

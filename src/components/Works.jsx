@@ -1,13 +1,15 @@
 import React from "react";
 import { worksInfo } from "../constants";
 import Work from "./Work";
+import AnimatedTitle from "./AnimatedTitle";
+import AnimatedText from "./AnimatedText";
 
 function Works() {
   return (
     <div id="works" className="bg-primary rounded-t-3xl">
-      <div className="flex flex-col items-center justify-center min-h-screen text-white wrapper">
+      <div className="flex flex-col items-center justify-center min-h-screen text-white rounded-t-3xl wrapper">
         <h2 className="text-center uppercase work font-bebas">
-          Selected Works
+          <AnimatedTitle text="Selected Works" />
         </h2>
         <p className="flex items-center justify-center font-ppmori">
           2020 <span className="line"></span>
