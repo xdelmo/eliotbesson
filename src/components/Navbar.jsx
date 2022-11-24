@@ -55,9 +55,11 @@ function Navbar() {
     <div className="bg-white">
       {" "}
       <nav className="flex justify-between py-4 font-bold tracking-tighter uppercase text-primary wrapper font-ppmori">
-        <a href="#" className=" text-primary font-bebas letter-spacing-xs">
-          EB
-        </a>
+        <a
+          href="#"
+          id="logo"
+          className=" text-primary font-bebas letter-spacing-xs"
+        ></a>
 
         <div id="menuToggle" onClick={handleMenu}>
           <svg

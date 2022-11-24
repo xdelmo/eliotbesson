@@ -23,6 +23,14 @@
     font-size: 8.25rem;
   }
 
+  #logo::after {
+    content: "EB";
+  }
+
+  #logo:hover::after,
+  #logo:active::after {
+    content: "Eliot Besson";
+  }
   .work {
     font-size: 3.5rem;
   }
