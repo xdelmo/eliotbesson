@@ -29,23 +29,23 @@ function AboutMe() {
     <div className="bg-white box-shadow-lg rounded-b-3xl drop-shadow-lg">
       <div
         id="aboutme"
-        className="Aboutme  min-h-screen py-20 flex flex-col justify-center items-start text-primary  uppercase wrapper "
+        className="flex flex-col items-start justify-center min-h-screen py-20 uppercase Aboutme text-primary wrapper "
       >
-        <h3 className="font-ppmori font-thin mb-2 text-xs opacity-50 letter-spacing-xs leading-5 ">
+        <h3 className="mb-2 text-xs font-thin leading-5 opacity-50 font-ppmori letter-spacing-xs ">
           A little more about me
         </h3>
         <motion.div
-          className="flex gap-6 flex-col "
+          className="flex flex-col gap-6 "
           variants={infosAboutMe}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false }}
         >
-          <p className="font-montserrat work letter-spacing-2xs leading-none uppercase">
-            Bonjour! I’m eliot, indepe ndant digital designer, and webflow
+          <p className="leading-none uppercase font-bebas work letter-spacing-xs">
+            Bonjour! I’m eliot, independant digital designer, and webflow
             expert, living on planet earth{" "}
             <motion.img
-              className="aboutme-img inline-block"
+              className="inline-block aboutme-img"
               src="/assets/globe.png"
               alt="globe"
               variants={imgVariants}
@@ -55,7 +55,7 @@ function AboutMe() {
             />{" "}
             since 1997.
           </p>
-          <p className="font-montserrat work letter-spacing-2xs leading-none uppercase">
+          <p className="leading-none uppercase font-bebas work letter-spacing-xs">
             i have +5 years of XP. in designing digital products,{" "}
             <motion.img
               className="aboutme-img"
@@ -69,7 +69,7 @@ function AboutMe() {
             with A strong focus on user interface.
           </p>
         </motion.div>
-        <p className="text-primary letter-spacing-xs leading-5 uppercase hover-underline-animation mt-8 up-letters-animation">
+        <p className="mt-8 leading-5 uppercase text-primary letter-spacing-xs hover-underline-animation up-letters-animation">
           Learn more
         </p>
       </div>

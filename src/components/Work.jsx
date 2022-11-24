@@ -2,14 +2,14 @@ import React from "react";
 
 function Work(props) {
   return (
-    <div className={`${props.bgColor} font-montserrat`}>
-      <div className="text-white min-h-screen wrapper py-20 flex flex-col justify-center items-center">
-        <div className="justify-center items-center flex flex-col">
+    <div className={`${props.bgColor} font-bebas`}>
+      <div className="flex flex-col items-center justify-center min-h-screen py-20 text-white wrapper">
+        <div className="flex flex-col items-center justify-center">
           {/* <picture className="work-img"> */}
           {/* <source
                 type="image/webp"
                 srcSet={`./assets/${props.img}.webp`}
-                className="rounded-3xl object-cover"
+                className="object-cover rounded-3xl"
               /> */}
           <img
             src={`./assets/${props.img}.png`}
@@ -17,8 +17,8 @@ function Work(props) {
             className="rounded-3xl work-img"
           />
           {/* </picture> */}
-          <div className="flex flex-col justify-center items-center uppercase">
-            <h2 className="work uppercase font-montserrat letter-spacing-xs mt-8">
+          <div className="flex flex-col items-center justify-center uppercase">
+            <h2 className="mt-8 uppercase work font-bebas letter-spacing-xs">
               {`${props.name}`}
             </h2>
             {props.tags.map((tag) => (
@@ -26,7 +26,7 @@ function Work(props) {
                 {tag}
               </p>
             ))}
-            <p className="text-white letter-spacing-xs leading-5 uppercase hover-underline-animation-light mt-8 up-letters-animation font-ppmori">
+            <p className="mt-8 leading-5 text-white uppercase letter-spacing-xs hover-underline-animation-light up-letters-animation font-ppmori">
               <a href={props.link}>Scroll to explore</a>
             </p>
           </div>

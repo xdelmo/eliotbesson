@@ -15,7 +15,7 @@ module.exports = {
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
         ppmori: ["PP Mori", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        // montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },

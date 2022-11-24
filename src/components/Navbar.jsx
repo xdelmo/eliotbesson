@@ -54,8 +54,8 @@ function Navbar() {
     // Navbar
     <div className="bg-white">
       {" "}
-      <nav className="flex  text-primary wrapper font-bold font-ppmori uppercase  tracking-tighter py-4 justify-between">
-        <a href="#" className=" text-primary font-ppmori letter-spacing-xs">
+      <nav className="flex justify-between py-4 font-bold tracking-tighter uppercase text-primary wrapper font-ppmori">
+        <a href="#" className=" text-primary font-bebas letter-spacing-xs">
           EB
         </a>
 
@@ -79,14 +79,14 @@ function Navbar() {
       {isMenuOpen && (
         <AnimatePresence>
           <motion.div
-            className=" bg-primary w-screen fixed top-0 left-0 z-10 right-0 h-screen"
+            className="fixed top-0 left-0 right-0 z-10 w-screen h-screen bg-primary"
             variants={navVariants}
             initial="hidden"
             animate="show"
             exit="exit"
           >
             <motion.div
-              className="bg-primary fixed top-0 left-0 right-0 z-20 h-screen text-lg tracking-tighter py-4 wrapper"
+              className="fixed top-0 left-0 right-0 z-20 h-screen py-4 text-lg tracking-tighter bg-primary wrapper"
               variants={navVariants}
               initial="hidden"
               animate="show"
@@ -109,16 +109,16 @@ function Navbar() {
                 </svg>
               </div>
 
-              <ul className="flex h-screen  flex-col justify-center text-lightDesaturated gap-2">
+              <ul className="flex flex-col justify-center h-screen gap-2 text-lightDesaturated">
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className="letter-spacing-xs flex hover:text-white"
+                    className="flex letter-spacing-xs hover:text-white"
                   >
                     <span className="tracking-wide text-2xs">/{nav.id}</span>
                     <a
                       href={nav.link}
-                      className="text-5xl ml-2"
+                      className="ml-2 text-5xl"
                       onClick={handleClickLink}
                     >
                       {nav.title}
