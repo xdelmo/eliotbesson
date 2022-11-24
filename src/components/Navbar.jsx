@@ -78,8 +78,9 @@ function Navbar() {
           </svg>
         </div>
       </nav>
-      {isMenuOpen && (
-        <AnimatePresence>
+      <AnimatePresence>
+        {" "}
+        {isMenuOpen && (
           <motion.div
             className="fixed top-0 left-0 right-0 z-10 w-screen h-screen bg-primary"
             variants={navVariants}
@@ -128,8 +129,8 @@ function Navbar() {
               </ul>
             </div>
           </motion.div>
-        </AnimatePresence>
-      )}
+        )}
+      </AnimatePresence>
     </div>
   );
 }
