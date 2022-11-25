@@ -1,6 +1,7 @@
 import React from "react";
 import { navLinks } from "../constants";
 import { motion, AnimatePresence } from "framer-motion";
+import AnimatedTitle from "./AnimatedTitle";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -27,7 +28,6 @@ function Navbar() {
   // Variants for framer motion animation menu
   const navVariants = {
     hidden: {
-      opacity: 0,
       y: "-100vh",
     },
     show: {
@@ -35,6 +35,7 @@ function Navbar() {
       y: 0,
       transition: {
         duration: 0.75,
+        stiffness: 50,
         // when: "beforeChildren",
         // staggerChildren: 0.4,
       },
@@ -42,10 +43,11 @@ function Navbar() {
 
     //! EXIT ANIMATION DOES NOT WORK
     exit: {
-      opacity: 0,
       y: "-100vh",
       transition: {
         duration: 0.75,
+        type: "spring",
+        stiffness: 50,
       },
     },
   };
@@ -110,7 +112,7 @@ function Navbar() {
                 </svg>
               </div>
 
-              <ul className="flex flex-col justify-center h-screen gap-2 text-lightDesaturated">
+              <ul className="flex flex-col justify-center h-full gap-2 text-lightDesaturated">
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
@@ -122,7 +124,7 @@ function Navbar() {
                       className="ml-2 text-5xl"
                       onClick={handleClickLink}
                     >
-                      {nav.title}
+                      <AnimatedTitle text={nav.title} />
                     </a>
                   </li>
                 ))}
