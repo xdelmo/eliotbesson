@@ -50,8 +50,8 @@ function App() {
                 <p className="uppercase">Besson</p>
               </div>
               <div className="flex items-center justify-center">
-                <h2 className="font-bebas hero">
-                  <AnimatedTitle text="welcome" />
+                <h2 className="tracking-wide font-bebas hero">
+                  <AnimatedTitle text="welcome!" />
                 </h2>
               </div>
               <div className="flex flex-row items-end justify-between">

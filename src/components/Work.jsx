@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedTitle from "./AnimatedTitle";
 
 function Work(props) {
   return (
@@ -18,8 +19,12 @@ function Work(props) {
           />
           {/* </picture> */}
           <div className="flex flex-col items-center justify-center uppercase">
-            <h2 className="mt-8 uppercase work font-bebas letter-spacing-xs">
+            {/* <h2 className="mt-8 uppercase work font-bebas letter-spacing-xs">
               {`${props.name}`}
+            </h2> */}
+
+            <h2 className="mt-8 tracking-wide text-center uppercase work font-bebas ">
+              <AnimatedTitle text={props.name} />
             </h2>
             {props.tags.map((tag) => (
               <p key={tag} className="font-ppmori">
