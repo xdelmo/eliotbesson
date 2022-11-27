@@ -54,12 +54,12 @@ export default function AnimatedTitle(props) {
     visible: {
       opacity: 1,
       y: `0em`,
-      transition: {
-        duration: 1,
-        // ease: [0.2, 0.65, 0.3, 0.9],
-      },
+
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
     },
   };
+
+  //! STAMPA SPAZIO ALLA FINE DELL'ULTIMA PAROLA ANCHE SE NON C'è
 
   return (
     <Title aria-label={text} role="heading">
@@ -73,7 +73,7 @@ export default function AnimatedTitle(props) {
             animate={ctrls}
             variants={wordAnimation}
             transition={{
-              delayChildren: index * 0.25,
+              // delayChildren: index * 0.25,
               staggerChildren: 0.05,
             }}
           >

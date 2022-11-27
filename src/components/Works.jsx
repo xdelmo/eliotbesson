@@ -36,7 +36,7 @@ function Works() {
   return (
     <div id="works" className="bg-primary rounded-t-3xl">
       <div className="flex flex-col items-center justify-center min-h-screen text-white rounded-t-3xl wrapper">
-        <h2 className="tracking-wide text-center uppercase work font-bebas">
+        <h2 className="overflow-hidden tracking-wide text-center uppercase work font-bebas">
           <AnimatedTitle text="Selected Works" />
         </h2>
         <p className="flex items-center justify-center font-ppmori">

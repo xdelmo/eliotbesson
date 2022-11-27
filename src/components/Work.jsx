@@ -23,7 +23,7 @@ function Work(props) {
               {`${props.name}`}
             </h2> */}
 
-            <h2 className="mt-8 tracking-wide text-center uppercase work font-bebas ">
+            <h2 className="mt-8 overflow-hidden tracking-wide text-center uppercase work font-bebas w-min ">
               <AnimatedTitle text={props.name} />
             </h2>
             {props.tags.map((tag) => (

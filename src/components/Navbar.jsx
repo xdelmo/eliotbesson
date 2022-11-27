@@ -121,7 +121,7 @@ function Navbar() {
                     <span className="tracking-wide text-2xs">/{nav.id}</span>
                     <a
                       href={nav.link}
-                      className="ml-2 text-5xl"
+                      className="ml-2 overflow-hidden text-5xl"
                       onClick={handleClickLink}
                     >
                       <AnimatedTitle text={nav.title} />
