@@ -51,7 +51,7 @@ function Work(props) {
                 {tag}
               </p>
             ))}
-            <p className="mt-8 leading-5 text-white uppercase letter-spacing-xs hover-underline-animation-light up-letters-animation font-ppmori">
+            <p className="mt-8 leading-5 text-white uppercase cursor-pointer letter-spacing-xs hover-underline-animation-light up-letters-animation font-ppmori">
               <a href={props.link}>Scroll to explore</a>
             </p>
           </div>

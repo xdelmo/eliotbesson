@@ -69,7 +69,7 @@ function AboutMe() {
             with A strong focus on user interface.
           </p>
         </motion.div>
-        <p className="mt-8 leading-5 uppercase text-primary letter-spacing-xs hover-underline-animation up-letters-animation">
+        <p className="mt-8 leading-5 uppercase cursor-pointer text-primary letter-spacing-xs hover-underline-animation up-letters-animation">
           Learn more
         </p>
       </div>
