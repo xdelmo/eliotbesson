@@ -7,6 +7,7 @@ import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedTitle from "./components/AnimatedTitle";
+import Footer2 from "./components/Footer2";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -36,13 +37,14 @@ function App() {
   return (
     <div className="App">
       <AnimatePresence mode="wait">
-        {isLoading && (
+        {isLoading ? (
           <motion.div
             className="h-screen bg-primary z-99 font-ppmori"
             variants={loadingVariants}
             initial="show"
             exit="exit"
-            id="loadingYes"
+            // stessa chiave su i due div nell'operatore ternario per non accavallare le due animazioni
+            key={`${isLoading}`}
           >
             <div className="flex flex-col justify-between h-screen py-4 text-white wrapper">
               <div className="flex flex-row justify-between">
@@ -50,7 +52,8 @@ function App() {
                 <p className="uppercase">Besson</p>
               </div>
               <div className="flex items-center justify-center">
-                <h2 className="tracking-wide font-bebas hero">
+                {/* overflow nascosto */}
+                <h2 className="overflow-hidden tracking-wide font-bebas hero">
                   <AnimatedTitle text="welcome!" />
                 </h2>
               </div>
@@ -60,12 +63,11 @@ function App() {
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {!isLoading && (
-          <div>
+        ) : (
+          <motion.div
+            // stessa chiave su i due div nell'operatore ternario per non accavallare le due animazioni
+            key={`${isLoading}`}
+          >
             <Navbar />
             <main>
               <Hero />
@@ -73,7 +75,7 @@ function App() {
               <AboutMe />
             </main>
             <Footer />
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

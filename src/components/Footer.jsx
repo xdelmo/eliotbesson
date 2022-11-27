@@ -7,24 +7,24 @@ function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  const footerVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-      transition: {
-        delay: 1,
-      },
-    },
-  };
+  // const footerVariants = {
+  //   hidden: {
+  //     opacity: 0,
+  //   },
+  //   show: {
+  //     opacity: 1,
+  //     transition: {
+  //       delay: 1,
+  //     },
+  //   },
+  // };
 
   return (
     <motion.footer
-      variants={footerVariants}
-      initial="hidden"
-      animate="show"
-      key="footer"
+    // variants={footerVariants}
+    // initial="hidden"
+    // animate="show"
+    // key="footer"
     >
       <div className=" footer-spacer"></div>
       <div
