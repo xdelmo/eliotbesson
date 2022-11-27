@@ -42,7 +42,7 @@ function AboutMe() {
           viewport={{ once: false }}
         >
           <p className="leading-none uppercase font-bebas work letter-spacing-xs">
-            Bonjour! I’m eliot, independant digital designer, and webflow
+            Bonjour! <br /> I’m eliot, independant digital designer, and webflow
             expert, living on planet earth{" "}
             <motion.img
               className="inline-block aboutme-img"
