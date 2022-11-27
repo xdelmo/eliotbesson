@@ -26,7 +26,7 @@ function Footer() {
     // animate="show"
     // key="footer"
     >
-      <div className=" footer-spacer"></div>
+      {/* <div className=" footer-spacer"></div> */}
       <div
         id="contact"
         className=" bg-primary footer rounded-t-3xl font-ppmori"

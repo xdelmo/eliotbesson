@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedTitle from "./components/AnimatedTitle";
 import Footer2 from "./components/Footer2";
+import Footer3 from "./components/Footer3";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -69,12 +70,14 @@ function App() {
             key={`${isLoading}`}
           >
             <Navbar />
-            <main>
+            <main className="relative mb-[100vh]">
               <Hero />
               <Works />
               <AboutMe />
             </main>
             <Footer />
+            {/* <Footer2 /> */}
+            {/* <Footer3 /> */}
           </motion.div>
         )}
       </AnimatePresence>
