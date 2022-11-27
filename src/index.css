@@ -110,6 +110,8 @@
     max-width: 250px;
     max-height: 250px;
     object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border: 10px solid rgba(255, 255, 255, 0.2);
   }
 
   /* per avere immagini della stessa altezza del testo in cui si trova */
@@ -141,14 +143,5 @@
     width: 100%;
     min-height: 100vh;
     pointer-events: auto;
-  }
-
-  .footer-spacer {
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    min-height: 100vh;
-    pointer-events: none;
   }
 }
