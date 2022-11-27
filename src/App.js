@@ -7,8 +7,8 @@ import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedTitle from "./components/AnimatedTitle";
-import Footer2 from "./components/Footer2";
-import Footer3 from "./components/Footer3";
+// import Footer2 from "./components/Footer2";
+// import Footer3 from "./components/Footer3";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
