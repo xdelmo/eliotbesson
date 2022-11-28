@@ -8,11 +8,10 @@ import Footer from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedTitle from "./components/AnimatedTitle";
 import Cookies from "./components/Cookies";
-// import Footer2 from "./components/Footer2";
-// import Footer3 from "./components/Footer3";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
+  const [cookiesBanner, setCookiesBanner] = React.useState(true);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -35,8 +34,6 @@ function App() {
       },
     },
   };
-
-  const [cookiesBanner, setCookiesBanner] = React.useState(true);
 
   return (
     <div className="App">
@@ -85,8 +82,6 @@ function App() {
               <AboutMe />
             </main>
             <Footer />
-            {/* <Footer2 /> */}
-            {/* <Footer3 /> */}
           </motion.div>
         )}
       </AnimatePresence>
