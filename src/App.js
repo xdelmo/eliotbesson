@@ -7,6 +7,7 @@ import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedTitle from "./components/AnimatedTitle";
+import Cookies from "./components/Cookies";
 // import Footer2 from "./components/Footer2";
 // import Footer3 from "./components/Footer3";
 
@@ -34,6 +35,8 @@ function App() {
       },
     },
   };
+
+  const [cookiesBanner, setCookiesBanner] = React.useState(true);
 
   return (
     <div className="App">
@@ -69,6 +72,12 @@ function App() {
             // stessa chiave su i due div nell'operatore ternario per non accavallare le due animazioni
             key={`${isLoading}`}
           >
+            {cookiesBanner && (
+              <Cookies
+                cookiesBanner={cookiesBanner}
+                setCookiesBanner={setCookiesBanner}
+              />
+            )}
             <Navbar />
             <main className="relative mb-[100vh]">
               <Hero />
