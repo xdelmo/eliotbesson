@@ -49,6 +49,7 @@ function Works() {
       {worksInfo.map((workInfo) => (
         <Work
           key={workInfo.id}
+          id={workInfo.id}
           name={workInfo.name}
           bgColor={workInfo.bgColor}
           img={workInfo.img}
