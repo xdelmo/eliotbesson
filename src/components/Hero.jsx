@@ -100,10 +100,10 @@ function Hero() {
 
           {/* <div ref={ref}> */}
           <div id="h2-desktop " className="">
-            <h1 className="font-bold relative -mt-20 flex uppercase text-primary text-[16rem] font-bebas letter-spacing-xs">
+            <h1 className="font-bold relative -mt-20 flex uppercase  text-primary text-[16rem] font-bebas letter-spacing-xs">
               <span className="z-0">Bes</span>
 
-              <div className="absolute translate-x-[250%] translate-y-[130%] overflow-hidden ">
+              <div className="absolute translate-x-[250%] translate-y-[120%] overflow-hidden ">
                 <motion.img
                   id="hello"
                   src="./assets/hello.png"
