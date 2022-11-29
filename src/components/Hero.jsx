@@ -2,8 +2,8 @@ import React from "react";
 import { motion, useScroll } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 import { useRef, useState, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Hero() {
   const placeholderText = [{ type: "heading1", text: "Eliot" }];
