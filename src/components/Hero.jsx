@@ -2,6 +2,8 @@ import React from "react";
 import { motion, useScroll } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 import { useRef, useState, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Hero() {
   const placeholderText = [{ type: "heading1", text: "Eliot" }];
@@ -15,29 +17,20 @@ function Hero() {
     },
   };
 
-  // const ref = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ["end end", "start start"],
-  // });
+  const ref = React.useRef(null);
+  const { scrollY } = useScroll();
 
-  // const [scrollY, setScrollY] = useState(0);
+  console.log("🚀 ~ file: Hero.jsx ~ line 22 ~ Hero ~ scrollY", scrollY);
+  console.log(typeof scrollY);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollY(window.scrollY);
-  //   };
-  //   handleScroll();
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-  // console.log(scrollY);
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      console.log("Page scroll: ", latest);
+    });
+  }, []);
 
   return (
-    <div className="bg-white ">
+    <div className="bg-white " ref={ref}>
       <div id="hero" className="min-h-screen wrapper">
         <div className="sm:hidden">
           <h1 className="flex flex-col font-bold uppercase text-primary hero font-bebas letter-spacing-xs">
@@ -77,7 +70,9 @@ function Hero() {
           </div>{" "}
         </div>
 
+        {/* ____________ */}
         {/* DESKTOP VIEW */}
+        {/* ____________ */}
         <div className="hidden sm:block">
           {/* primo blocco */}
           <div className="flex items-center justify-between gap-8">
@@ -104,15 +99,20 @@ function Hero() {
           </div>
 
           {/* <div ref={ref}> */}
-          <div>
+          <div id="h2-desktop " className="">
             <h1 className="font-bold relative -mt-20 flex uppercase text-primary text-[16rem] font-bebas letter-spacing-xs">
               <span className="z-0">Bes</span>
-              <motion.img
-                src="./assets/hello.png"
-                className="h-[100px] absolute w-auto rounded-3xl translate-x-[250%] translate-y-[140%]"
-                alt="hello"
-                // style={{ translateY: scrollY }}
-              />
+
+              <div className="absolute translate-x-[250%] translate-y-[130%] overflow-hidden ">
+                <motion.img
+                  id="hello"
+                  src="./assets/hello.png"
+                  alt="hello"
+                  className="h-[100px]  rounded-3xl "
+                  style={{ translateY: scrollY }}
+                  // style={{ rotate: scrollY, translateY: scrollY }}
+                />
+              </div>
               <span className="z-[2]">son</span>
             </h1>
           </div>
