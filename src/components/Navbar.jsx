@@ -60,7 +60,7 @@ function Navbar() {
         <a
           href="#"
           id="logo"
-          className=" text-primary font-bebas letter-spacing-xs"
+          className=" text-primary font-ppmori letter-spacing-xs"
         ></a>
 
         <div id="menuToggle" onClick={handleMenu}>
@@ -81,7 +81,6 @@ function Navbar() {
         </div>
       </nav>
       <AnimatePresence>
-        {" "}
         {isMenuOpen && (
           <motion.div
             className="fixed top-0 left-0 right-0 z-10 w-screen h-screen bg-primary"
@@ -131,6 +130,85 @@ function Navbar() {
               </ul>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+      {/* __________ */}
+      {/* DESKTOP VIEW */}
+      {/* __________ */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.nav
+            className="fixed top-0 left-0 right-0 z-10 hidden w-screen h-screen sm:block"
+            variants={navVariants}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            key="bg"
+          >
+            <div className="flex">
+              {/* colonna sinistra bianca ausiliaria */}
+              <div className="flex-1 h-screen bg-white"></div>
+              {/* blocco principale */}
+              <div className="flex justify-between w-full wrapper">
+                {/* blocco bianco */}
+                <div className="flex-1 py-4 bg-white text-primary ">
+                  <p className="text-xs font-thin leading-5 opacity-50 font-ppmori letter-spacing-xs">
+                    Hope you're having a great day ;)
+                  </p>
+                </div>
+
+                {/* blocco scuro */}
+                <div className="flex-1 py-4 text-white bg-primary">
+                  <div className="ml-4">
+                    <div className="flex justify-between">
+                      <p className="text-xs font-thin leading-5 opacity-50 font-ppmori letter-spacing-xs">
+                        Eliot BESSON - Portfolio 2022
+                      </p>
+                      <div id="menuToggle" onClick={handleMenu}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-6 h-6 ml-auto text-white"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <ul className="flex flex-col justify-center gap-2 mt-24 text-lightDesaturated">
+                      {navLinks.map((nav) => (
+                        <li
+                          key={nav.id}
+                          className="flex letter-spacing-xs hover:text-white"
+                        >
+                          <div className="flex justify-between w-full">
+                            <span className="tracking-wide text-2xs">
+                              /{nav.id}
+                            </span>
+                            <a
+                              href={nav.link}
+                              className="ml-auto overflow-hidden text-5xl "
+                              onClick={handleClickLink}
+                            >
+                              <AnimatedTitle text={nav.title} />
+                            </a>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              {/* colonna destra scura ausiliaria */}
+              <div className="flex-1 h-screen bg-primary"></div>
+            </div>
+          </motion.nav>
         )}
       </AnimatePresence>
     </div>
