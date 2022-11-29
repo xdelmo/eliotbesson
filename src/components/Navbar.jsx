@@ -159,7 +159,7 @@ function Navbar() {
 
                 {/* blocco scuro */}
                 <div className="flex-1 py-4 text-white bg-primary">
-                  <div className="ml-4">
+                  <div className="h-full ml-4">
                     <div className="flex justify-between">
                       <p className="text-xs font-thin leading-5 opacity-50 font-ppmori letter-spacing-xs">
                         Eliot BESSON - Portfolio 2022
@@ -181,7 +181,7 @@ function Navbar() {
                         </svg>
                       </div>
                     </div>
-                    <ul className="flex flex-col justify-center gap-2 mt-24 text-lightDesaturated">
+                    <ul className="flex flex-col justify-center h-full gap-2 text-lightDesaturated">
                       {navLinks.map((nav) => (
                         <li
                           key={nav.id}
