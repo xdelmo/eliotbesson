@@ -64,7 +64,7 @@ function Works() {
 
             <div className="flex items-end justify-between w-full ">
               <div className="pb-24">
-                <AnimatedTextWord text="2020 ───── 2022" />
+                <AnimatedTextWord text="2020 ────────── 2022" />
               </div>
               <h2 className="uppercase font-bebas letter-spacing-xs text-[11rem]">
                 {" "}
