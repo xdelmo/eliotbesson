@@ -31,7 +31,7 @@ function Hero() {
 
   return (
     <div className="bg-white " ref={ref}>
-      <div id="hero" className="min-h-screen wrapper">
+      <div id="hero" className=" wrapper">
         <div className="sm:hidden">
           <h1 className="flex flex-col font-bold uppercase text-primary hero font-bebas letter-spacing-xs">
             {/* Eliot animation */}
